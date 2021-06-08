@@ -100,7 +100,7 @@ console.log(test1)
 // declare a string2Index, set to last index
 
 
-// while both string1Index and string2Index are greater than 0
+// while either string1Index and string2Index are greater than 0
   // var result = the num of string1 at string1Index plus the num of string2 at string2Index plus the carry value
   // if result is 0
     // add a string 0 to the beginning of print
