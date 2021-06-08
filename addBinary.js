@@ -89,36 +89,3 @@ var test1 = addBinary('100', '1');
 // var test3 = addBinary('1', '0');
 
 console.log(test1)
-
-// declare a print variable set to empty string
-// declare a carry variable set to 0
-
-// add a string 0 to beginning of string1
-// add a string 0 to beginning of string2
-
-// declare a string1Index, set to last index
-// declare a string2Index, set to last index
-
-
-// while either string1Index and string2Index are greater than 0
-  // var result = the num of string1 at string1Index plus the num of string2 at string2Index plus the carry value
-  // if result is 0
-    // add a string 0 to the beginning of print
-    // set carry to 0
-  // if result is 1
-    // add a string 1 to the beginning of print
-    // set carry to 0
-  // if result is 2
-    // add a string 0 to the beginning of print
-    // set carry to 1
-  // if result is 3
-    // add a string 1 to the beginning of print
-    // set carry to 1
-
-  // if string1Index is not 0
-    // string1Index --
-  // if string2Index is not 0
-    // string2Index --
-
-
-// return print
