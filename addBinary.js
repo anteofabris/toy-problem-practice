@@ -24,9 +24,10 @@ var string2Index = string2.length - 1
 
 
 // while both string1Index and string2Index are greater than 0
-while (string1Index > 0 && string2Index > 0) {
+while (string1Index > 0 || string2Index > 0) {
   // var result = the num of string1 at string1Index plus the num of string2 at string2Index plus the carry value
   var result = Number(string1[string1Index]) + Number(string2[string2Index]) + carry
+  console.log('result: ', result)
   // if result is 0
   if (result === 0) {
     // add a string 0 to the beginning of print
@@ -66,6 +67,12 @@ while (string1Index > 0 && string2Index > 0) {
     // string2Index --
     string2Index --
   }
+
+  console.log('print: ', print)
+}
+
+if (carry > 0) {
+  print = carry.toString() + print
 }
 
 // return print
@@ -78,10 +85,10 @@ return print;
 // "1" + "0", return  "1"
 
 var test1 = addBinary('100', '1');
-var test2 = addBinary('11', '1');
-var test3 = addBinary('1', '0');
+// var test2 = addBinary('11', '1');
+// var test3 = addBinary('1', '0');
 
-console.log(test1, test2, test3)
+console.log(test1)
 
 // declare a print variable set to empty string
 // declare a carry variable set to 0
