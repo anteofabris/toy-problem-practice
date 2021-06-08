@@ -4,3 +4,4 @@ Note: neither binary string will contain leading 0s unless the string itself is 
 // "100" + "1", return "101"
 // "11" + "1", return "100"
 // "1" + "0", return  "1"
+
