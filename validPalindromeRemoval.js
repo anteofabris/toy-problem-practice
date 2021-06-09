@@ -10,7 +10,7 @@ Note: a palindrome is a sequence of characters that reads the same forwards and 
 var validPalindromeRemoval = function (string) {
 
   for (var i = 0; i < string.length; i ++) {
-    var current = string.split('').splice(i, 1).join('')
+    var current = string.slice(0, i) + string.slice(i + 1, string.length)
     if (isPal(current)) {
       return true;
     }
@@ -19,32 +19,20 @@ var validPalindromeRemoval = function (string) {
 }
 
 var isPal = function (string) {
-  if (string.length % 2 === 1) {
-    string = string.split('').splice((string.length - 1) / 2).join('')
-  }
-  var first = string.slice(0, (string.length / 2))
-  var second = string.slice((string.length / 2), string.length)
-
-  var firstRev = first.split('').reverse().join('')
-
-  if ( firstRev === second) {
-    return true
-  }
-  return false
+return string === string.split('').reverse().join('')
 }
 
 // "abcba", return true
 // "foobof", return true (remove the first 'o', the second 'o', or 'b')
 // "abccab", return false
 
-var test1 = 'abcba';
-var test2 = 'foobof';
-var test3 = 'abccab';
+// var test1 = 'abcba';
+// var test2 = 'foobof';
+// var test3 = 'abccab';
 
-console.log(validPalindromeRemoval(test1))
+// console.log(validPalindromeRemoval('raicecar'))
 
-// if isPal(inputString)
-  // return true
+
 
 // iterate over input string
   // take current char out and check if it is a palindrome
