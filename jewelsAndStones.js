@@ -11,12 +11,16 @@ jewels = "AYOPD", stones = "ayopd", return 0
 
 var jewelsAndStones = (stones, jewels) => {
   // create a reference object
+  //debugger;
   var counter = 0
   var ref = {}
   // iterate over jewels and add a key/val to ref object if it doens' ready exist
   for (var i = 0; i < jewels.length; i ++) {
     if (!ref[jewels[i]]) {
-      ref[jewels[i]] = true
+      ref[jewels[i]] = 1
+    } else {
+        ref[jewels[i]] += 1
+
     }
   }
 
@@ -25,7 +29,7 @@ var jewelsAndStones = (stones, jewels) => {
     // if current stone exists in ref object
     if (ref[stones[i]]) {
       // increment counter
-      counter ++
+      counter += ref[stones[i]]
     }
   }
   // return counter
@@ -33,6 +37,16 @@ var jewelsAndStones = (stones, jewels) => {
 
 }
 
+
+
+// jewels1 = "abc";
+//  stones1 = "ac" // return 2
+// jewels2 = "Af";
+//  stones2 = "AaaddfFf" // return 3
+// jewels3 = "AYOPD";
+//  stones3 = "ayopd" // return 0
+
+// console.log(jewelsAndStones(jewels3, stones3))
 // i - two strings
 // o - number
 // c
