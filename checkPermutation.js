@@ -49,6 +49,10 @@ var checkPermutation = (string1, string2) => {
 
   // console.log(checkPermutation(string3a, string3b))
 
+
+  // if strings are not the same length
+    // return false
+
   // iterate over first string
   // count each char and store in ref object
 
@@ -60,8 +64,5 @@ var checkPermutation = (string1, string2) => {
       // return false
     // if value at key doesn't match value at ref1 key
       // return false
-
-  // if length of Object.keys are not the same
-    // return false
 
   // return true

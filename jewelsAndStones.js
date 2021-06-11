@@ -37,6 +37,13 @@ var jewelsAndStones = (stones, jewels) => {
 
 }
 
+  // iterate over jewels and add a key/val to ref object if it doens' ready exist
+  // iterate over stones
+    // if current stone exists in ref object
+      // increment counter
+
+  // return counter
+
 
 
 // jewels1 = "abc";
