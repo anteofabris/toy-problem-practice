@@ -13,9 +13,8 @@ a rotation of 'erbottlewat')
 // e - if one string or both are empty
 
 // check if they are the same length
-
 // duplicate str 2 i.e. 'cat' -> 'catcat'
-// checj if str1 is now a substring of str2
+// check if str1 is now a substring of str2
 
 
 // bananas & ananas
