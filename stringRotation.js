@@ -12,7 +12,7 @@ var stringRotation = (str1, str2) => {
     return false
   }
 
-  if isSubstring(str1, str2+str2) {
+  if (isSubstring(str1, str2+str2)) {
     return true;
   }
 
@@ -40,3 +40,4 @@ var isSubstring = (str1, str2) => {
 // c - only call isSubstring once; O(n)
 // e - if one string or both are empty
 
+console.log(stringRotation('cat', 'atc'))
