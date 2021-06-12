@@ -5,11 +5,35 @@ using only one call to isSubstring (.eg 'waterbottle' is
 a rotation of 'erbottlewat')
 */
 
+// str1 and str2
+
+var stringRotation = (str1, str2) => {
+  if (str1.length !== str2.length) {
+    return false
+  }
+
+  if isSubstring(str1, str2+str2) {
+    return true;
+  }
+
+  return false
+}
+
+// check if they are the same length
+// check they equal the same value
+
+//
+
+// duplicate str 2 i.e. 'cat' -> 'catcat'
+// checj if str1 is now a substring of str2
+
+
+// bananas & ananas
+
 
 var isSubstring = (str1, str2) => {
   return str2.includes(str1)
   }
-
 
 // i - two strings
 // o - bool
