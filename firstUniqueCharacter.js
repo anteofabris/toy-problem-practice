@@ -14,6 +14,22 @@ Ex: Given the following strings...
 // e - if a unique char doesn't exist, return - 1
 
 var firstUniqueChar = (string) => {
+  var result = 0
+
+  var count = (string) => {
+    var repeats = 0
+    var current = string[0]
+    var newstring = ''
+    for (var i = 1; i < string.length; i ++) {
+      if (string[i] === current) {
+        if (repeats === 0) {
+          newString = string.slice(1, i - 1) + string.slice(i + 1, string.length)
+        } else {
+          newString = string.slice(0, i) + string.slice(i + 1, string.length)
+        }
+      }
+    }
+  }
 
 }
 
@@ -42,4 +58,18 @@ var firstUniqueChar = (string) => {
 
   // crete inner function count(string)
     // create toSplice array
+    // create index0 var set to val at index0
+    // create repeated var set to 0
     // iterate over string from 0
+      // if val at current index equals index0
+        // if repeated is 0
+          // splice 0 and splice current index
+          // repeated ++
+          // i -= 2
+        // if repeated is > 0
+          // splice current index
+          // i --
+
+    // if repeated is 0
+      // return
+    // else, increment splice fisrt index off and call count on rest of string
