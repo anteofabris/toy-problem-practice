@@ -11,8 +11,34 @@ s = "ide", t = "idea", return 'a'
 s = "coding", t "ingcod", return ''
 */
 
-var spotTheDifference = () => {
-  //
+var spotTheDifference = (s, t) => {
+  var ref = {}
+  var result = ''
+  t.forEach((letter) => {
+    if (ref[letter]) {
+      ref[letter] ++
+    } else {
+      ref[letter] = 1
+    }
+  })
+
+  s.forEach((letter) => {
+    if (ref[letter]) {
+      if (ref[letter] === 0) {
+        delete ref[letter]
+      } else {
+        ref[letter] --
+      }
+    }
+  })
+
+  for (var key in ref) {
+    if (key) {
+      result = ref[key]
+    }
+  }
+
+return result;
 
 }
 
@@ -20,3 +46,12 @@ var spotTheDifference = () => {
 // o - one-letter string or ''
 // c - not brute force
 // e - empty strings or dissimilar strings
+
+
+// iterate over t, store each letter in a key and count occurence in value
+// iterate over s, subtract/delete value/key of each letter
+
+// if only one letter remains
+  // return that letter
+// if no lette rremains
+  // return ''
