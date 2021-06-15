@@ -30,4 +30,11 @@ var intersectionOfNumbers = (array1, array2) => {
 }
 
 
-// remove duplicates at end
+// create result array
+// create reference object
+// for each num in array1
+  // add num to ref object
+// for each num in array2
+  // if num exists in ref object
+    // push num to result
+    // delete num from ref object
