@@ -10,5 +10,20 @@ nums1 = [2, 4, 6, 8], nums2 = [1, 3, 5, 7], return []
 */
 
 var intersectionOfNumbers = (array1, array2) => {
+  // create a ref object
+  // iterate over array1
+    // store in ref object as false
+  // iterate over array2
+    // if current num in ref object
+      // ref at current num = true
+
+  // for keys in ref object
+    // if ref[key] === false
+      // delete ref[key]
+
+  // return Object.keys(ref)
 
 }
+
+
+// remove duplicates at end
