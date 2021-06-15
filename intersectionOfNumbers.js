@@ -26,9 +26,13 @@ var intersectionOfNumbers = (array1, array2) => {
     }
   })
 
+  return result;
 
 }
 
+// nums1 = [2,4,6,8]
+// nums2 = [1,3,5,7]
+// console.log(intersectionOfNumbers(nums1, nums2))
 
 // create result array
 // create reference object
