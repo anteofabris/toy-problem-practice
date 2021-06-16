@@ -38,18 +38,34 @@ var uncommonWords = (str1, str2) => {
   // create ref2
   var ref2 = {}
   // for each word in split str1
+  var split1 = str1.split(' ')
+  split1.forEach((w) => {
+    ref1[w] = true
+  })
     // add to ref1 as true
   // for each word in split str1
+  var split2 = str2.split(' ')
+  split2.forEach((w) => {
+    ref2[w] = true
+  })
     // add to ref2 as true
   // for key in ref1
+  for (var key in ref1) {
+    if (ref2[key]) {
+      delete ref2[key]
+    } else {
+      ref2[key] = true
+    }
+  }
     // if ref2[key] exists
       // delete it from ref2
   // return keys of ref2 as an array
+  return Object.keys(ref2)
 
 }
 
-var sentence1 = "the the the the"
-var sentence2 = "hi hi hi hi"
+var sentence1 = "the hi the hi"
+var sentence2 = "the hi the"
 console.log(uncommonWords(sentence1, sentence2))
 
 // create ref obj
