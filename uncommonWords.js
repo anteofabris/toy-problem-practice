@@ -67,16 +67,3 @@ var uncommonWords = (str1, str2) => {
 var sentence1 = "the hi the hi"
 var sentence2 = "the hi the"
 console.log(uncommonWords(sentence1, sentence2))
-
-// create ref obj
-// create deleted obj
-// split str1 and store in array
-// split str2 and store in array
-
-// for every word in split1
-  // add to ref obj as true
-// for every word in split2
-  // if word exists in ref
-    // delete from ref and add to deleted
-  // else if word doesn't exist in deleted
-    // add to ref
