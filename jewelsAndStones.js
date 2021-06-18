@@ -23,7 +23,7 @@ var jewelsAndStones = (stones, jewels) => {
 
     }
   }
-  //
+ //
   // iterate over stones
   for (var i = 0; i < stones.length; i ++) {
     // if current stone exists in ref object

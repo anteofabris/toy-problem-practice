@@ -46,7 +46,7 @@ return result;
 // o - one-letter string or ''
 // c - not brute force
 // e - empty strings or dissimilar strings
-
+//
 
 // iterate over t, store each letter in a key and count occurence in value
 // iterate over s, subtract/delete value/key of each letter

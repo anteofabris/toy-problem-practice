@@ -49,7 +49,7 @@ var checkPermutation = (string1, string2) => {
 
   // console.log(checkPermutation(string3a, string3b))
 
-
+ //
   // if strings are not the same length
     // return false
 
