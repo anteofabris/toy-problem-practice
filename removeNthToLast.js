@@ -8,7 +8,23 @@ Ex: Given the following linked lists...
 1->2->3->null, n = 3, return 2->3->null
 */
 
-var removeNthToLast = (ll) => {
+var removeNthToLast = (head, n) => {
+  var current = head
+  var counter = 0
+  while (current.next !== null) {
+    current = current.next
+    counter++
+  }
+
+  counter = counter - n
+
+  current = head
+  while (counter > 0) {
+    current = current.next
+    counter --
+  }
+
+
 
 }
 
