@@ -11,3 +11,15 @@ Ex: Given the following linked lists...
 var removeNthToLast = (ll) => {
 
 }
+
+// start at head aka set current to head
+  // while next node is not null
+    // keep going aka set current to current.next
+    // increment counter
+
+// set counter to ocunter - n
+// start at head again aka set current to head
+  // while counter is not 0
+    // keep going aka set current to head
+    // decrement counter
+// delete current
