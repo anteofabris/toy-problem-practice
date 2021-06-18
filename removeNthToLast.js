@@ -19,11 +19,14 @@ var removeNthToLast = (head, n) => {
   counter = counter - n
 
   current = head
+  var prev;
   while (counter > 0) {
+    prev = current
     current = current.next
-    counter --
+    counter--
   }
 
+  prev.next = current.next
 
 
 }
