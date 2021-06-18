@@ -27,6 +27,7 @@ var removeNthToLast = (head, n) => {
   }
 
   prev.next = current.next
+  return head;
 
 
 }
