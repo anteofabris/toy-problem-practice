@@ -20,7 +20,9 @@ Ex: Given the following linked lists...
 // if odd, iterate over half of counter rounded up
 
 
-var findMiddleElement = (head) => {
+ß
+
+var middleNode = function (head) {
   var double = true
   var current = head
   var half = head
@@ -41,11 +43,16 @@ var findMiddleElement = (head) => {
     }
   }
 
+  if (!double) {
+    half = half.next
+  }
+
   return half
 
-}
+
+};
 
 var toggleDouble = (bool) => {
-  if bool return false
+  if (bool) { return false }
   return true
 }
