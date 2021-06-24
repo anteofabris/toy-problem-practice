@@ -8,3 +8,6 @@ Ex: Given the following linked lists...
 1->9->3->7->7 (7 points to itself), return a reference to the node containing 7
 */
 
+var startOfCycle = (head) => {
+
+}
