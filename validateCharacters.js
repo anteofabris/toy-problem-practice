@@ -10,7 +10,23 @@ Ex: Given the following strings...
 
 var validateCharacters = (string) => {
 
+  var stack = []
+  var ref = {
+    '(': ')',
+    '[': ']',
+    '{': '}'
+  }
 
+  for (var i = 0; i < string.length; i ++) {
+    if (ref[string[i]]) {
+      stack.push(ref[string[i]])
+    } else {
+      if (string[i] !== stack.pop()) {
+        return false
+      }
+    }
+  }
+  return stack.length === 0
 }
 
 // create a stack array
