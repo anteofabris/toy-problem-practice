@@ -9,5 +9,23 @@ s = "foobar", return "fbar"
 s = "abccbefggfe", return "a"
 */
 
-// iterate over input string keeping track of previous char
+// iterate over input string keeping track of previous char and previous char index
 // if previous char matches current char,
+// slice out prev char and current char
+// start at prev char index and keep going
+
+
+var removeAdjacentDuplicates = (s) => {
+  var prev = '';
+  var prevIndex = -1
+
+  for (var i = 0; i < s.length; i++) {
+    if (s[i] === prev) {
+      s = s.slice(0, prevIndex) + s.slice(i, s.length)
+    }
+    prev = s[i]
+    prevIndex++
+  }
+
+  return s
+}
