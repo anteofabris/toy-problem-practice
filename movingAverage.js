@@ -16,26 +16,44 @@ MovingAverage class definition:
 
 */
 
-public class MovingAverage {
-    // TODO: declare any instance variables you require.
-/**
- * Initializes a MovingAverage with a
- * capacity of `size`.
- */
+// public class MovingAverage {
+//     // TODO: declare any instance variables you require.
+// /**
+//  * Initializes a MovingAverage with a
+//  * capacity of `size`.
+//  */
 
 
 
- public MovingAverage(int size) {
-  // TODO: initialize your MovingAverage.
+//  public MovingAverage(int size) {
+//   // TODO: initialize your MovingAverage.
+// }
+
+// /**
+//  * Adds `val` to the stream of numbers
+//  * and returns the current average of the numbers.
+//  */
+// public double next(int val) {
+//    // TODO: implement this method.
+// }
+
+// }
+
+
+var MovingAverage = (n) => {
+  var obj = {
+    storage: []
+    next: () => {
+      storage.push(n)
+      return storage.reduce((a, b) => { return a + b }, 0) / storage.length
+    }
+  }
+
+  return obj
 }
 
-/**
- * Adds `val` to the stream of numbers
- * and returns the current average of the numbers.
- */
-public double next(int val) {
-   // TODO: implement this method.
-}
+// add all the stored numbers together and divide by amt of numbers
 
-}
-
+//next
+  // takes input n, stores it in an array
+  // loops over storage with reduce, adding them up, divides by storage length and returns the result
