@@ -40,17 +40,36 @@ MovingAverage class definition:
 // }
 
 
-var MovingAverage = (n) => {
-  var obj = {
-    storage: []
-    next: () => {
-      storage.push(n)
-      return storage.reduce((a, b) => { return a + b }, 0) / storage.length
-    }
-  }
+// var MovingAverage = () => {
+//   var obj = {
+//     storage: []
+//     next: (n) => {
+//       storage.push(n)
+//       return storage.reduce((a, b) => { return a + b }, 0) / storage.length
+//     }
+//   }
 
-  return obj
+//   return obj
+// }
+
+var MovingAverage = function () {
+  this.storage = []
 }
+
+MovingAverage.prototype.next = function (n) {
+  if (this.storage.length === 3) {
+   this.storage.shift()
+  }
+  this.storage.push(n)
+  return (this.storage.reduce((a, b) => { return a + b }, 0)) / this.storage.length
+}
+
+var test = new MovingAverage()
+
+console.log(test.next(3))
+console.log(test.next(5))
+console.log(test.next(7))
+console.log(test.next(6))
 
 // add all the stored numbers together and divide by amt of numbers
 
