@@ -7,28 +7,38 @@ peek() (returning the top value without removing it), and
 empty() (whether or not the stack is empty).
 */
 
-class Queue {
+var Queue = function () {
   this.stack = []
   this.last = null
 }
 
-Queue.prototype.push = (n) => {
+Queue.prototype.push = function (n) {
+    console.log('this is the stack: ', this.stack)
   this.stack.push(n)
   this.last = n
 
 }
 
-Queue.prototype.pop = () => {
+Queue.prototype.pop = function () {
   var result = this.stack.pop()
   this.last = this.stack[this.stack.length - 1]
   return result;
 }
 
-Queue.prototype.peek = () => {
+Queue.prototype.peek = function () {
   return this.last
 }
 
-Queue.prototype.empty = () => {
+Queue.prototype.empty = function () {
   this.stack = []
   this.last = null
 }
+
+var test = new Queue()
+test.push(1)
+test.push(8)
+test.push(3)
+test.peek()
+
+
+// difference between arrow functions and es5 function is the binding of 'this'
