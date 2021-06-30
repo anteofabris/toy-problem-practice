@@ -9,7 +9,7 @@ empty() (whether or not the stack is empty).
 
 class Queue {
   this.stack = []
-this.last = null
+  this.last = null
 }
 
 Queue.prototype.push = (n) => {
@@ -19,8 +19,9 @@ Queue.prototype.push = (n) => {
 }
 
 Queue.prototype.pop = () => {
-  this.stack.pop()
+  var result = this.stack.pop()
   this.last = this.stack[this.stack.length - 1]
+  return result;
 }
 
 Queue.prototype.peek = () => {
